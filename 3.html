@@ -23,6 +23,23 @@
         text-decoration: none;
       }
     </style>
+    <script type="text/javascript">
+      function checkPassword()
+      {
+        var password = document.getElementById('passwordBox');
+        var strPassword = password.value;
+
+        if(strPassword == "ok1234")
+        {
+          return true;
+        }
+        else
+        {
+          alert("비밀번호가 틀립니다!!");
+          return false;
+        }
+      }
+    </script>
   </head>
   <body>
     <h1><a href="index.html">My Web</a></h1>
@@ -34,7 +51,11 @@
           <li class="active">메뉴3</li>
         </ol>
       </div>
-      <div class="">메뉴 3 페이지</div>
+      <div class="">
+        <p>이 페이지는 저만의 페이지입니다. 다른 사람은 접근할 수 없습니다.</p>
+        <p><input id="passwordBox" type="password"></p>
+        <a href="secret.html" onclick="return checkPassword();">비밀번호 입력 후 클릭시 페이지로 이동합니다</a>
+      </div>
     </div>
 
   </body>
